@@ -21,7 +21,7 @@
 
 - name: Install Percona server
   run_once: true
-  apt: name=percona-server-server-5.6 state=present
+  apt: name=percona-server-server-5.6 state=present force=yes
   notify:
     - update-rc mysql
     - mysql restart
