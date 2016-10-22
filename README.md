@@ -40,7 +40,7 @@ This Playbook will setup:
 
 1. SSH onto a newly created server
 1.5. Add necessary Apt package (if not already installed) with `sudo apt-get install software-properties-common python-software-properties`
-2. Add Ansible and PHP 7 repositories with `sudo add-apt-repository ppa:ondrej/php-7.0 && sudo add-apt-repository ppa:ansible/ansible`, press ENTER when requested
+2. Add Ansible and PHP 7 repositories with `sudo add-apt-repository ppa:ondrej/php && sudo add-apt-repository ppa:ansible/ansible`, press ENTER when requested
 3. Update Apt with `sudo apt-get update && sudo apt-get upgrade`
 4. Install Git and Ansible with `sudo apt-get install ansible git`
 5. Clone this repository with `git clone https://github.com/jknlsn/hgv-php7/`
