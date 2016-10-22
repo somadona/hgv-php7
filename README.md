@@ -32,7 +32,7 @@ This Playbook will setup:
 ###Script with prompts
 
 1. SSH onto a newly created server
-2. Type `wget https://raw.githubusercontent.com/jknlsn/hgv-php7/master/run.sh`
+2. Type `wget https://raw.githubusercontent.com/somadona/hgv-php7/master/run.sh`
 3. Type `chmod 755 run.sh`
 4. Type `./run.sh` and follow the prompts, fill in required information. See the manual explanation for the steps automated for you.
 
@@ -43,7 +43,7 @@ This Playbook will setup:
 2. Add Ansible and PHP 7 repositories with `sudo add-apt-repository ppa:ondrej/php && sudo add-apt-repository ppa:ansible/ansible`, press ENTER when requested
 3. Update Apt with `sudo apt-get update && sudo apt-get upgrade`
 4. Install Git and Ansible with `sudo apt-get install ansible git`
-5. Clone this repository with `git clone https://github.com/jknlsn/hgv-php7/`
+5. Clone this repository with `git clone https://github.com/somadona/hgv-php7/`
 6. Move into the "hgv-resuable folder" with `cd hgv-php7`
 7. Edit the `hosts` file and change `website` to your folder name for your website with the command `nano hosts`, or any text editor.
 8. Edit the name of `website` file in the `host_vars` folder to your folder name for your website.
