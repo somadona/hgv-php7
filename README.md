@@ -17,26 +17,15 @@ Added are options to change the site URL and the admin email address.
 This Playbook will setup:
 
 - **Percona DB** (MySQL) (Looking for MariaDB? Try [this](https://github.com/xDae/hgv-deploy-full))
-- ~~**HHVM** (Default PHP Parser)~~
 - **PHP-FPM** (PHP Parser)
 - **Nginx**
 - **Varnish** (Running by default)
-- ~~**Memcached and APC**~~ Not compatible with PHP7 at the moment.
 - **Clean WordPress Install** (Latest Version, although confirmed working with 4.4 at time of writing)
 - **WP-CLI**
 
 #### This playbook will only run on Ubuntu 14.04 LTS
 
 ## Installation
-
-###Script with prompts
-
-1. SSH onto a newly created server
-2. Type `wget https://raw.githubusercontent.com/somadona/hgv-php7/master/run.sh`
-3. Type `chmod 755 run.sh`
-4. Type `./run.sh` and follow the prompts, fill in required information. See the manual explanation for the steps automated for you.
-
-###Manual
 
 1. SSH onto a newly created server
 1.5. Add necessary Apt package (if not already installed) with `sudo apt-get install software-properties-common python-software-properties`
@@ -48,13 +37,12 @@ This Playbook will setup:
 7. Edit the `hosts` file and change `website` to your folder name for your website with the command `nano hosts`, or any text editor.
 8. Edit the name of `website` file in the `host_vars` folder to your folder name for your website.
 9. Change your sites specific information **including passwords** inside the hostname file inside the `host_vars` directory
-
-9.1. Remove Systemd through sudo apt-get remove systemd -y
-10. Run Ansible with `sudo ansible-playbook -i hosts playbook.yml -c local`.
-11. Remove the cloned git directory from your server with `rm -rf hgv-php7/`
-12. Run `/usr/bin/mysql_secure_installation` to install MySQL and secure it. Your root password will be blank by default
-13. Restart Varnish and Nginx with: `sudo service varnish restart && sudo service nginx restart`
-14. You're good to go! A new WordPress install running PHP7.0-FPM and Varnish should be waiting for you at your hostname!
+10. Remove Systemd through sudo apt-get remove systemd -y
+11. Run Ansible with `sudo ansible-playbook -i hosts playbook.yml -c local`.
+12. Remove the cloned git directory from your server with `rm -rf hgv-php7/`
+13. Run `/usr/bin/mysql_secure_installation` to install MySQL and secure it. Your root password will be blank by default
+14. Restart Varnish and Nginx with: `sudo service varnish restart && sudo service nginx restart`
+15. You're good to go! A new WordPress install running PHP7.0-FPM and Varnish should be waiting for you at your hostname!
 
 ## Turning off Varnish (Use only Nginx)
 
