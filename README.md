@@ -40,7 +40,7 @@ This Playbook will setup:
 
 1. SSH onto a newly created server
 1.5. Add necessary Apt package (if not already installed) with `sudo apt-get install software-properties-common python-software-properties`
-2. Add Ansible and PHP 7 repositories with `sudo add-apt-repository ppa:ondrej/php && sudo add-apt-repository ppa:ansible/ansible`, press ENTER when requested
+2. Add Ansible and PHP 7 repositories with `sudo add-apt-repository ppa:ondrej/php && sudo add-apt-repository ppa:ansible/ansible && sudo add-apt-repository ppa:ondrej/nginx`, press ENTER when requested
 3. Update Apt with `sudo apt-get update && sudo apt-get upgrade`
 4. Install Git and Ansible with `sudo apt-get install ansible git`
 5. Clone this repository with `git clone https://github.com/somadona/hgv-php7/`
@@ -48,6 +48,7 @@ This Playbook will setup:
 7. Edit the `hosts` file and change `website` to your folder name for your website with the command `nano hosts`, or any text editor.
 8. Edit the name of `website` file in the `host_vars` folder to your folder name for your website.
 9. Change your sites specific information **including passwords** inside the hostname file inside the `host_vars` directory
+9.1. Remove Systemd through sudo apt-get remove systemd -y
 10. Run Ansible with `sudo ansible-playbook -i hosts playbook.yml -c local`.
 11. Remove the cloned git directory from your server with `rm -rf hgv-php7/`
 12. Run `/usr/bin/mysql_secure_installation` to install MySQL and secure it. Your root password will be blank by default
