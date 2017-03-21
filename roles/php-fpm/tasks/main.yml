@@ -4,16 +4,22 @@
   run_once: true
   apt: name={{ item }} state=present
   with_items:
-      - php7.0
-      - php7.0-cli
-      # - php5-imagick
-      - php7.0-curl
-      - php7.0-gd
-      - php7.0-fpm
-      # - php5-memcache
-      # - php5-memcached
-      # - php5-xdebug
-      # - phpunit
+      - php7.1
+      - php7.1-cli
+      - php7.1-curl
+      - php7.1-gd
+      - php7.1-fpm
+      - php7.1-pspell
+      - php7.1-tidy
+      - php7.1-imagick
+      - php7.1-mbstring
+      - php7.1-dev
+      - php7.1-xml
+      - php7.1-xmlrpc
+      - php7.1-xmlreader
+      - php7.1-xmlwriter
+      - php7.1-mysql
+      - php7.1-cgi
 
 # - name: Do fpm/php.ini
 #   template: src=etc/php5/fpm/php.ini dest=/etc/php5/fpm/php.ini owner=root group=root mode=0644
