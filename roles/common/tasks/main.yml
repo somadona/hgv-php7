@@ -11,7 +11,7 @@
     - git
     - curl
     - unzip
-    - php7.0-mysql
+    - php7.1-mysql
     - traceroute
     - ack-grep
     - subversion
