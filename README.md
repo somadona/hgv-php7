@@ -39,7 +39,7 @@ This Playbook will setup:
 9. Change your sites specific information **including passwords** inside the hostname file inside the `host_vars` directory
 10. Remove Systemd through sudo apt-get remove systemd -y
 11. sudo apt-get install python3 python3-pyqt5 python3-matplotlib vlc graphviz -y
-12. wget http://www.boris.unito.it/static/archive/boris_3.49-0.deb && dpkg -i boris_3.49-0.deb && apt-get -f install
+12. wget http://www.boris.unito.it/static/archive/boris_3.60-0.deb && dpkg -i boris_3.60-0.deb && apt-get -f install
 13. Run Ansible with `sudo ansible-playbook -i hosts playbook.yml -c local`.
 14. Remove the cloned git directory from your server with `rm -rf hgv-php7/`
 15. Run `/usr/bin/mysql_secure_installation` to install MySQL and secure it. Your root password will be blank by default
